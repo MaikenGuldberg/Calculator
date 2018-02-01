@@ -105,5 +105,16 @@ namespace Calculator.Test.Unit
             Assert.That(result, Is.EqualTo(30));
 
         }
+
+        [TestCase(4, 2, 2)]
+        [TestCase(6,3,2)]
+        [TestCase(5,2,2.5)]
+
+        public void Divide_ADividendAndADivisor_ValidResult(double dividend, double divisor, double expresult)
+        {
+            var result = _uut.Divide(dividend, divisor);
+
+            Assert.That(result,Is.EqualTo(expresult));
+        }
     }
 }
