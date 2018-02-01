@@ -61,46 +61,9 @@ namespace Calculator.Test.Unit
             Assert.That(result,Is.EqualTo(expresult));
         }
         [Test]
-        public void CheckAccumulator_AddFunction()
+        public void CheckAccumulator_PlusFunction(double a, double b, doub double sum)
         {
-            var result = _uut.Add(5, 5);
-
-            result = 5 + _uut.Accumulator;
-
-            Assert.That(result,Is.EqualTo(15));
-        }
-
-        [Test]
-
-        public void CheckAccumulator_SubtractFunction()
-        {
-            var result = _uut.Subtract(5, 2);
-
-            result = 5 + _uut.Accumulator;
-
-            Assert.That(result,Is.EqualTo(8));
-        }
-
-        [Test]
-
-        public void CheckAccumulator_MultiplyFunction()
-        {
-            var result = _uut.Multiply(5, 2);
-
-            result = 5 + _uut.Accumulator;
-
-            Assert.That(result,Is.EqualTo(15));
-        }
-
-        [Test]
-
-        public void CheckAccumulator_PowerFunction()
-        {
-            var result = _uut.Power(5, 2);
-
-            result = 5 + _uut.Accumulator;
-
-            Assert.That(result,Is.EqualTo(30));
+            
         }
     }
 }
