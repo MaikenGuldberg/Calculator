@@ -60,7 +60,5 @@ namespace Calculator.Test.Unit
 
             Assert.That(result,Is.EqualTo(expresult));
         }
-
-
     }
 }
