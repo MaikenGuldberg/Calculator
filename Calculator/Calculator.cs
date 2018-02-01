@@ -34,6 +34,43 @@ namespace Calculator
         }
 
 
+        // * Added overloads
+        public double Add(double addend)
+        {
+
+            return Accumulator + addend;
+        }
+
+        public double Subtract(double subtractor)
+        {
+            return Accumulator - subtractor;
+        }
+
+        public double Multiply(double multiplier)
+        {
+            return Accumulator * multiplier;
+        }
+
+        public double Divide(double divisor)
+        {
+            try
+            {
+                return Accumulator / divisor;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+        }
+
+        public double Power(double exponent)
+        {
+            return Math.Pow(Accumulator, exponent);
+        }
+
+        // * End Overloads
+
 
 
 
