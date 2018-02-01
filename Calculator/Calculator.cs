@@ -27,5 +27,26 @@ namespace Calculator
         {
             return Math.Pow(x, exp);
         }
+
+
+
+
+
+
+
+
+
+        public double Divide(double dividend, double divisor)
+        {
+            try
+            {
+                return dividend / divisor;
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
     }
 }
