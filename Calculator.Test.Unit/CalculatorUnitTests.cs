@@ -60,5 +60,10 @@ namespace Calculator.Test.Unit
 
             Assert.That(result,Is.EqualTo(expresult));
         }
+        [Test]
+        public void CheckAccumulator_PlusFunction(double a, double b, doub double sum)
+        {
+            
+        }
     }
 }
