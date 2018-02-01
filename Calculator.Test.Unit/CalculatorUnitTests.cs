@@ -63,7 +63,7 @@ namespace Calculator.Test.Unit
         }
 
         [Test]
-        public void CheckAccumulator_PlusFunction()
+        public void CheckAccumulator_AddFunction()
         {
             var result = _uut.Add(5, 5);
 
@@ -115,6 +115,15 @@ namespace Calculator.Test.Unit
             var result = _uut.Divide(dividend, divisor);
 
             Assert.That(result,Is.EqualTo(expresult));
+        }
+        [Test]
+        public void Add_OverloadMethod_Valid()
+        {
+            var result = _uut.Add(5, 5);
+
+            result = _uut.Add(result);
+
+            Assert.That(result,Is.EqualTo(20));
         }
     }
 }
