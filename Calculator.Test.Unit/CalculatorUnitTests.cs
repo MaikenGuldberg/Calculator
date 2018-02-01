@@ -11,6 +11,7 @@ namespace Calculator.Test.Unit
     public class CalculatorUnitTests
     {
         private Calculator _uut;
+
         [SetUp]
         public void SetUp()
         {
@@ -25,18 +26,18 @@ namespace Calculator.Test.Unit
         {
             var result = _uut.Add(a, b);
 
-            Assert.That(result,Is.EqualTo(expresult));
+            Assert.That(result, Is.EqualTo(expresult));
         }
 
         [TestCase(2, 3, -1)]
-        [TestCase(5,3,2)]
-        [TestCase(10,5,5)]
+        [TestCase(5, 3, 2)]
+        [TestCase(10, 5, 5)]
 
         public void Subtract_TwoNumbers_ValidResult(double a, double b, double expresult)
         {
             var result = _uut.Subtract(a, b);
 
-            Assert.That(result,Is.EqualTo(expresult));
+            Assert.That(result, Is.EqualTo(expresult));
         }
 
         [TestCase(2, 5, 10)]
@@ -47,7 +48,7 @@ namespace Calculator.Test.Unit
         {
             var result = _uut.Multiply(a, b);
 
-            Assert.That(result,Is.EqualTo(expresult));
+            Assert.That(result, Is.EqualTo(expresult));
         }
 
         [TestCase(3, 2, 9)]
@@ -58,12 +59,51 @@ namespace Calculator.Test.Unit
         {
             var result = _uut.Power(x, exp);
 
-            Assert.That(result,Is.EqualTo(expresult));
+            Assert.That(result, Is.EqualTo(expresult));
         }
+
         [Test]
-        public void CheckAccumulator_PlusFunction(double a, double b, doub double sum)
+        public void CheckAccumulator_PlusFunction()
         {
-            
+            var result = _uut.Add(5, 5);
+
+            result = 5 + _uut.Accumulator;
+
+            Assert.That(result, Is.EqualTo(15));
+        }
+
+        [Test]
+
+        public void CheckAccumulator_SubtractFunction()
+        {
+            var result = _uut.Subtract(5, 2);
+
+            result = 5 + _uut.Accumulator;
+
+            Assert.That(result, Is.EqualTo(8));
+        }
+
+        [Test]
+
+        public void CheckAccumulator_MultiplyFunction()
+        {
+            var result = _uut.Multiply(5, 2);
+
+            result = 5 + _uut.Accumulator;
+
+            Assert.That(result, Is.EqualTo(15));
+        }
+
+        [Test]
+
+        public void CheckAccumulator_PowerFunction()
+        {
+            var result = _uut.Power(5, 2);
+
+            result = 5 + _uut.Accumulator;
+
+            Assert.That(result, Is.EqualTo(30));
+
         }
     }
 }
