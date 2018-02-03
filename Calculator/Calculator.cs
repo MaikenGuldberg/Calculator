@@ -82,6 +82,7 @@ namespace Calculator
         {
             try
             {
+                Accumulator = dividend / divisor;
                 return dividend / divisor;
             }
             catch (DivideByZeroException e)

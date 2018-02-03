@@ -125,5 +125,51 @@ namespace Calculator.Test.Unit
 
             Assert.That(result,Is.EqualTo(20));
         }
+
+        [Test]
+        public void Subtract_overloadMethod_Valid()
+        {
+            var result = _uut.Subtract(5, 2);
+
+            result = _uut.Subtract(result);
+
+            Assert.That(result,Is.EqualTo(0));
+        }
+
+        [Test]
+        public void Multiply_OverloadMethod_Valid()
+        {
+            var result = _uut.Multiply(5, 2);
+
+            result = _uut.Multiply(result);
+
+            Assert.That(result,Is.EqualTo(100));
+        }
+
+        [Test]
+        public void Divide_OverloadMethod_Valid()
+        {
+            var result = _uut.Divide(5,2);
+
+            result = _uut.Divide(result);
+
+            Assert.That(result,Is.EqualTo(1));
+        }
+
+        [Test]
+        public void Divide_OverloadMethod_ExceptionIsThrown()
+        {
+            //Hvordan testes?
+        }
+
+        [Test]
+        public void Power_OverloadMethod_Valid()
+        {
+            var result = _uut.Power(2,3);
+
+            result = _uut.Power(result);
+
+            Assert.That(result, Is.EqualTo(16777216));
+        }
     }
 }
