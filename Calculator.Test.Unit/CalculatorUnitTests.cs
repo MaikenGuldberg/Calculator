@@ -179,5 +179,17 @@ namespace Calculator.Test.Unit
 
             Assert.That(result, Is.EqualTo(16777216));
         }
+
+
+        //Ved ikke helt om denne test er god nok. Måske skal man lave en constructor hvor man kan sætte Accumulatoren til en bestemt værdi.
+        [Test]
+
+        public void Clear_AccumulatorIs5_AccumulatorIs0()
+        {
+            _uut.Add(2, 3);
+            _uut.Clear();
+            Assert.That(_uut.Accumulator,Is.EqualTo(0));
+
+        }
     }
 }

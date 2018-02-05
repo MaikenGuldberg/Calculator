@@ -82,7 +82,10 @@ namespace Calculator
 
         // * End Overloads
 
-
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
 
 
 
