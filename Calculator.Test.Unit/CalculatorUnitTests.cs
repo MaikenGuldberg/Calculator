@@ -116,6 +116,14 @@ namespace Calculator.Test.Unit
 
             Assert.That(result,Is.EqualTo(expresult));
         }
+
+        [Test]
+
+        public void Divide_NumberDividedeByZero_ThrowsException()
+        {
+            Assert.Throws<System.DivideByZeroException>(() => _uut.Divide(5, 0));
+        }
+
         [Test]
         public void Add_OverloadMethod_Valid()
         {

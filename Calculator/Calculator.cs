@@ -33,6 +33,18 @@ namespace Calculator
             return Math.Pow(x, exp);
         }
 
+        public double Divide(double dividend, double divisor)
+        {
+            if (divisor != 0)
+            {
+                Accumulator = dividend / divisor;
+                return dividend / divisor;
+            }
+            else
+            {
+                throw new System.DivideByZeroException();
+            }
+        }
 
         // * Added overloads
         public double Add(double addend)
@@ -53,14 +65,13 @@ namespace Calculator
 
         public double Divide(double divisor)
         {
-            try
-            {
+            if(divisor!=0)
+            { 
                 return Accumulator / divisor;
             }
-            catch (Exception e)
+            else
             {
-                Console.WriteLine(e.Message);
-                throw;
+                throw new System.DivideByZeroException();
             }
         }
 
@@ -78,18 +89,6 @@ namespace Calculator
 
 
 
-        public double Divide(double dividend, double divisor)
-        {
-            try
-            {
-                Accumulator = dividend / divisor;
-                return dividend / divisor;
-            }
-            catch (DivideByZeroException e)
-            {
-                Console.WriteLine(e);
-                throw;
-            }
-        }
+        
     }
 }
