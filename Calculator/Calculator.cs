@@ -43,15 +43,13 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
-            try
-            {
+            if(divisor!=0)
                 return dividend / divisor;
-            }
-            catch (DivideByZeroException e)
+            else
             {
-                Console.WriteLine(e);
-                throw;
+                throw new System.DivideByZeroException();
             }
+            
         }
     }
 }
