@@ -168,7 +168,9 @@ namespace Calculator.Test.Unit
         [Test]
         public void Divide_OverloadMethod_ExceptionIsThrown()
         {
-            //Hvordan testes?
+            var result = _uut.Divide(5, 2);
+
+            Assert.Catch<System.DivideByZeroException>(() => _uut.Divide(0));
         }
 
         [Test]
