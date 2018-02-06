@@ -21,6 +21,7 @@ namespace Calculator.Test.Unit
         [TestCase(2, 5, 7)]
         [TestCase(2.5, 3.5, 6)]
         [TestCase(6, 10, 16)]
+        [TestCase(10,6,16)]
 
         public void Add_TwoNumbers_ValidResult(double a, double b, double expresult)
         {
