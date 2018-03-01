@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Calculator
 {
@@ -47,7 +43,7 @@ namespace Calculator
             }
             else
             {
-                throw new System.DivideByZeroException();
+                throw new DivideByZeroException();
             }
         }
 
@@ -76,7 +72,7 @@ namespace Calculator
             }
             else
             {
-                throw new System.DivideByZeroException();
+                throw new DivideByZeroException();
             }
         }
 
